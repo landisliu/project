@@ -1,12 +1,13 @@
 all:main
 CC=gcc
 INSTALLDIR=~/mylib
+FILENAME=filetransfer1.c
 main:main.o userlib.o
 	$(CC) main.o userlib.o -o main
 userlib.o:userlib.c userlib.h
 	$(CC) -g -c userlib.c
-main.o:main.c userlib.h
-	$(CC) -g -c main.c
+main.o:$(FILENAME) userlib.h
+	$(CC) -g -c $(FILENAME) -o main.o
 clean:
 	-rm main.o userlib.o
 install:main
