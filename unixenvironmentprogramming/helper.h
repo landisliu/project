@@ -4,6 +4,7 @@
 #include<string.h>
 #include<sys/types.h>
 #include<stdlib.h>
+#include<errno.h>
 void err_quit(char *);
 void sys_log(char *);
 void pr_exit(int);
