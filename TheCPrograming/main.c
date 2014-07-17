@@ -8,11 +8,10 @@
 #include<syslog.h>
 int main(int argc,char * argv[])
 {
-	openlog("here",LOG_PID,LOG_USER);
-	syslog(LOG_INFO|LOG_LOCAL2,"OK");
-	closelog();
-	
-	system("date");	
+	extern int file1;
+	extern int file2;
+	extern int file3;
+	printf("%d,%d,%d\n",file1,file2,file3);
 	return 0;
 }
 
