@@ -22,6 +22,7 @@ int main()
 			comTimes++;
 		}
 	t2 = clock();
+
 	statistics("bubble",t1,t2,comTimes,exchangeTimes);
 	return 0;
 }
