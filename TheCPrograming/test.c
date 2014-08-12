@@ -1,12 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
 void readline(char*);
+double getd()
+{
+	return 43.5;
+}
 int main()
 {
-	int i = rand();
-	int array[100];	 
+	int k = getd();	 
+	printf("%d\n",k);
 	return 0;
 }
 
@@ -18,4 +21,5 @@ void readline(char * chars)
 		*chars=c;
 		chars++;
 	}
+
 }

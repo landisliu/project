@@ -1,4 +1,4 @@
-all:main
+all:main grep strindex test reversepoland
 CC=gcc
 INSTALLDIR=~/mylib
 FILENAME=filetransfer1.c
@@ -8,8 +8,16 @@ userlib.o:userlib.c userlib.h
 	$(CC) -g -c userlib.c
 main.o:$(FILENAME) userlib.h
 	$(CC) -g -c $(FILENAME) -o main.o
+grep:grep.o
+	$(CC) grep.o -o grep
+grep.o:grep.c
+	$(CC) -c grep.c -o grep.o
+strindex:strindex.o
+strindex.o:strindex.c
+reversepoland:reversepoland.o
+reversepoland.o:reversepoland.c
 clean:
-	-rm main.o userlib.o
+	-rm -rf main.o userlib.o grep.o grep strindex.o strindex test.o test
 install:main
 	@if [ -d $(INSTALLDIR) ]; \
 	then \

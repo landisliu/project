@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define ARRAYSIZE 2024000
+#define ARRAYSIZE 20
 static void exchange(int * array,int index1,int index2)
 {
 	int temp = *(array+index1);
