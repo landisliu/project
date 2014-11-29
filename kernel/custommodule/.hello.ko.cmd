@@ -1,0 +1,1 @@
+cmd_/home/landis/project/kernel/custommodule/hello.ko := ld -r -m elf_x86_64 -T /home/landis/linux-3.15.6/scripts/module-common.lds --build-id  -o /home/landis/project/kernel/custommodule/hello.ko /home/landis/project/kernel/custommodule/hello.o /home/landis/project/kernel/custommodule/hello.mod.o

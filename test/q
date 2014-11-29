@@ -1,0 +1,47 @@
+ULIMIT(3)                                                Linux Programmer's Manual                                                ULIMIT(3)
+
+
+
+NNAAMMEE
+       ulimit - get and set user limits
+
+SSYYNNOOPPSSIISS
+       ##iinncclluuddee <<uulliimmiitt..hh>>
+
+       lloonngg uulliimmiitt((iinntt _c_m_d,, lloonngg _n_e_w_l_i_m_i_t));;
+
+DDEESSCCRRIIPPTTIIOONN
+       Warning:  This  routine  is  obsolete.  Use ggeettrrlliimmiitt(2), sseettrrlliimmiitt(2), and ssyyssccoonnff(3) instead.  For the shell command uulliimmiitt(), see
+       bbaasshh(1).
+
+       The uulliimmiitt() call will get or set some limit for the calling process.  The _c_m_d argument can have one of the following values.
+
+       UULL__GGEETTFFSSIIZZEE
+              Return the limit on the size of a file, in units of 512 bytes.
+
+       UULL__SSEETTFFSSIIZZEE
+              Set the limit on the size of a file.
+
+       33      (Not implemented for Linux.)  Return the maximum possible address of the data segment.
+
+       44      (Implemented but no symbolic constant provided.)  Return the maximum number of files that the calling process can open.
+
+RREETTUURRNN VVAALLUUEE
+       On success, uulliimmiitt() returns a nonnegative value.  On error, -1 is returned, and _e_r_r_n_o is set appropriately.
+
+EERRRROORRSS
+       EEPPEERRMM  A unprivileged process tried to increase a limit.
+
+CCOONNFFOORRMMIINNGG TTOO
+       SVr4, POSIX.1-2001.  POSIX.1-2008 marks uulliimmiitt() as obsolete.
+
+SSEEEE AALLSSOO
+       bbaasshh(1), ggeettrrlliimmiitt(2), sseettrrlliimmiitt(2), ssyyssccoonnff(3)
+
+CCOOLLOOPPHHOONN
+       This page is part of release 3.54 of the Linux _m_a_n_-_p_a_g_e_s project.  A description of the project,  and  information  about  reporting
+       bugs, can be found at http://www.kernel.org/doc/man-pages/.
+
+
+
+Linux                                                            2008-08-06                                                       ULIMIT(3)

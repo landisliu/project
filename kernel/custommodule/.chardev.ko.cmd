@@ -1,0 +1,1 @@
+cmd_/home/landis/project/kernel/custommodule/chardev.ko := ld -r -m elf_x86_64 -T /home/landis/linux-3.15.6/scripts/module-common.lds --build-id  -o /home/landis/project/kernel/custommodule/chardev.ko /home/landis/project/kernel/custommodule/chardev.o /home/landis/project/kernel/custommodule/chardev.mod.o
