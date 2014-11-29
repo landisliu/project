@@ -38,6 +38,7 @@ int main()
 	}
 
 	ret = listen(sock_serv,5);
+	
 
 	if(ret<0)
 	{

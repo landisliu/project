@@ -1,12 +1,12 @@
-all:main
-CC=gcc
-F_Name=3_5.c
-main:main.o helper.o
-main.o:$(F_Name)
-	$(CC) -c $(F_Name) -o main.o
-helper.o:helper.c
-
+all:server client
+server:server6.o
+	$(CC) server6.o -o server
+client:client6.o
+	$(CC) client6.o -o client
+server6.o:server6.c 
+client6.o:client6.c
 clean:
-	rm -f helper.o main.o
-move:
-	mv main /home/landis/bin
+	rm -rf abc server client *.o  /tmp/serverlog /tmp/clientlog abc*
+run:
+	./server>/tmp/serverlog
+	./test.sh>/tmp/clientlog
